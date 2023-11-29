@@ -17,14 +17,14 @@ const std = @import("std");
 pub fn main() void {
     const scrambled = "great base for all your justice are belong to us";
 
-    var base1: []const u8 = scrambled[15..23];
-    var base2: []const u8 = scrambled[6..10];
-    var base3: []const u8 = scrambled[32..];
+    const base1: []const u8 = scrambled[15..23];
+    const base2: []const u8 = scrambled[6..10];
+    const base3: []const u8 = scrambled[32..];
     printPhrase(base1, base2, base3);
 
-    var justice1: []const u8 = scrambled[11..14];
-    var justice2: []const u8 = scrambled[0..5];
-    var justice3: []const u8 = scrambled[24..31];
+    const justice1: []const u8 = scrambled[11..14];
+    const justice2: []const u8 = scrambled[0..5];
+    const justice3: []const u8 = scrambled[24..31];
     printPhrase(justice1, justice2, justice3);
 
     std.debug.print("\n", .{});
