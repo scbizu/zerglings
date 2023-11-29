@@ -48,9 +48,9 @@ pub fn main() void {
     // ----------------------------------
     // 1101 + 0001 =  1110  | false
     // 1110 + 0001 =  1111  | false
-    // 1111 + 0001 =  0000  | true  (the real answer is 10000)
-    // 0000 + 0001 =  0001  | false
-    // 0001 + 0001 =  0010  | false
+    // 1111 + 0001 =  10000  | true  (the real answer is 10000)
+    // 10000 + 00001 =  10001  | false
+    // 10001 + 00001 =  10010  | false
     //
     // In the last two lines the value of 'a' is corrupted because there was
     // an overflow in line 3, but the operations of lines 4 and 5 themselves
@@ -63,7 +63,7 @@ pub fn main() void {
     //
     // If there was no overflow at all while adding 5 to a, what value would
     // 'my_result' hold? Write the answer in into 'expected_result'.
-    const expected_result: u8 = ???;
+    const expected_result: u8 = 0b10010;
     print(". Without overflow: {b:0>8}. ", .{expected_result});
 
     print("Furthermore, ", .{});
@@ -78,6 +78,6 @@ pub fn main() void {
     // Now it's your turn. See if you can fix this attempt to use
     // this builtin to reverse the bits of a u8 integer.
     const input: u8 = 0b11110000;
-    const tupni: u8 = @bitReverse(input, tupni);
+    const tupni: u8 = @bitReverse(input);
     print("{b:0>8} backwards is {b:0>8}.\n", .{ input, tupni });
 }

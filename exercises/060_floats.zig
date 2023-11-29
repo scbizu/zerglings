@@ -41,9 +41,9 @@ pub fn main() void {
     // The approximate weight of the Space Shuttle upon liftoff
     // (including boosters and fuel tank) was 4,480,000 lb.
     //
-    // We'll convert this weight from pound to kilograms at a
-    // conversion of 0.453592kg to the pound.
-    const shuttle_weight: f16 = 0.453592 * 4480e6;
+    // We'll convert this weight from tons to kilograms at a
+    // conversion of 907.18kg to the ton.
+    const shuttle_weight: f32 = 907.18 * 2200;
 
     // By default, float values are formatted in scientific
     // notation. Try experimenting with '{d}' and '{d:.3}' to see
